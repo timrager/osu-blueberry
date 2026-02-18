@@ -12,6 +12,8 @@ body {
   font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Prevents "pull-to-refresh" from accidentally reloading the chat */
+  overscroll-behavior-y: none;
 }
 
 code {
@@ -85,7 +87,8 @@ code {
   height: 100%;
 }
 .appFixedHeight100 {
-  height: calc(100vh - 5rem);
+  /* Fixes the "Keyboard voers input" bug on mobile */
+  height: calc(100dvh - 5rem);
 }
 
 .appHeightInherit {
